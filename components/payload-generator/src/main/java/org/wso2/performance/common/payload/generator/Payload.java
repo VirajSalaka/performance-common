@@ -35,7 +35,7 @@ public abstract class Payload {
 
     public byte[] getJson() {
         StringBuilder payloadBuilder = new StringBuilder();
-        payloadBuilder.append("{\"size\":\"").append(payloadSize).append("B\",\"payload\":");
+        payloadBuilder.append("{\"payload\":");
         generatePayloadObject(payloadBuilder);
         return payloadBuilder.toString().getBytes(payloadCharset);
     }
